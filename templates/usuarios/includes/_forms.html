@@ -1,0 +1,17 @@
+{{ form.non_field_errors }}
+
+{% for field in form %}
+    <div class="item form-group">
+        <div class="control-label col-md-3 col-sm-3 col-xs-6">
+            <label class="{% for class in field.label_clasess %}{{ class }} {% endfor %}"for="{{ field.name }}">{{ field.label }}
+                <span>{% if field.errors %}{{ field.errors }}{% endif %}</span>
+            </label>
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-6">
+                {{ field }}
+        </div>
+
+    </div>
+
+{%  endfor %}

@@ -1,0 +1,252 @@
+{% extends "usuarios/base_dashboard.html" %}
+{% load staticfiles %}
+
+{% block title %}Sistema de Administracion Financiera{% endblock title %}
+{% block subtitle %}{% endblock %}
+
+{% block content %}
+
+    <!-- Begin page -->
+    <div id="wrapper">
+    <!-- wrapper -->
+
+        {% include "usuarios/nav.html" %}
+
+        <div class="content-page">
+        <!-- Start content-page -->
+            <div class="content">
+            <!-- Start container -->
+                <div class="container">
+
+
+                 <!-- Page-Title -->
+
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <!--div class="alert alert-success fade-in fade-out" class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span></button>
+                                <strong>&nbsp;&nbsp;Bienvenido al Menu Inicio !!</strong>
+                            </div-->
+
+                            <h4 class="pull-left page-title">Bienvenido </h4>
+                            <ol class="breadcrumb pull-right">
+                                <li class="active">Safin</li>
+                                <li class="active"><a href="{% url 'usuarios:dashboard' %}"><i class="md fa fa-lastfm-square"></i>
+
+                                    <i class="fa fa-map" aria-hidden="true"></i>
+                                    Inicio</a></li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <section>
+                        <!-- STAR section-->
+
+                        <div class="row">
+
+        <div class="col-md-6 col-sm-6">
+            <div class="box box-success">
+                <div class="box-body box-profile">
+                    <h3 class="profile-username text-left">SISTEMA DE VENTA</h3>
+                    <p class="text-muted text-left">
+                        <small class="text-color" style="text-transform: uppercase;">ALMACÉN PRINCIPAL: PRINCIPAL</small>
+                    </p>
+                    </div>
+            </div>
+            <!-- /.box-body -->
+        </div>
+
+        <div class="col-md-6 col-sm-6" style="text-transform: uppercase;">
+            <div class="box box-success">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Accesos Directos</h3>
+                </div>
+                <div class="box-body text-left">
+                    <a href="./?view=products" class="btn btn-default btn-xs">Productos</a>
+                    <a href="./?view=inventary&stock=4" class="btn btn-default btn-xs">Inventario Principal</a>
+                    <a href="./?view=smallbox&opt=all" class="btn btn-default btn-xs">Caja chica</a>
+                </div>
+            </div>
+            <!-- /.box-body -->
+        </div>
+
+    </div>
+                        <!-- .row -->
+
+                        <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box">
+                <span class="info-box-icon bg-purple"><i class="fa fa-spinner fa-pulse"></i></span>
+                <div class="info-box-content">
+                    <div class="pull-left">
+                        <span class="info-box-text">TOTAL DE SERVICIOS</span>
+                        <span class="info-box-number" data-plugin="counterUp">3</span>
+                        <span class="info-box-text text-purple"><strong>SERVICIOS</strong></span>
+                    </div>
+                </div>
+                <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+              <span class="info-box-icon bg-danger"><i class="fa fa-male"></i></span>
+              <div class="info-box-content">
+                  <div class="pull-left">
+                      <span class="info-box-text">TOTAL DE CLIENTES</span>
+                      <span class="info-box-number" data-plugin="counterUp">4</span>
+                      <span class="info-box-text text-danger"><strong>CLIENTES</strong></span>
+                  </div>
+              </div>
+              <!-- /.info-box-content -->
+          </div>
+            <!-- /.info-box -->
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box">
+                <span class="info-box-icon bg-success"><i class="fa fa-shopping-cart"></i></span>
+                <div class="info-box-content">
+                    <div class="pull-left">
+                        <span class="info-box-text">TOTAL DE VENTAS</span>
+                        <span class="info-box-number">93,139</span>
+                        <span class="info-box-text text-success"><strong>VENTAS DEL MES</strong></span>
+                    </div>
+                </div>
+                <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box">
+                <span class="info-box-icon bg-warning"><i class="fa fa-area-chart"></i></span>
+                <div class="info-box-content">
+                    <div class="pull-left">
+                        <span class="info-box-text">TOTAL DE INGRESOS</span>
+                        <span class="info-box-number">93,139</span>
+                        <span class="info-box-text text-warning"><strong>INGRESO DEL MES</strong></span>
+                    </div>
+                </div>
+                <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+    </div>
+                        <!-- .row -->
+
+                    </section>
+                    <!-- END section-->
+
+                    <!-- Start Widget -->
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-lg-3">
+                            <div class="mini-stat clearfix bx-shadow">
+                                <a href="{% url 'usuarios:informacion' user.username %}" class="btn btn-primary btn-lg active" role="button">Informacion</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-lg-3">
+                            <div class="mini-stat clearfix bx-shadow">
+                                <a href="{% url 'usuarios:editar_usuario' %}" class="btn btn-primary btn-lg active" role="button">Modificar Usuario</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-lg-3">
+                            <div class="mini-stat clearfix bx-shadow">
+                                <a href="{% url 'usuarios:editar_password' %}"  target="_blank" class="btn btn-primary btn-lg active" role="button">Cambiar Contraseña</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-lg-3">
+                            <div class="mini-stat clearfix bx-shadow">
+                                <a href="#"   target="_blank" class="btn btn-primary btn-lg active" role="button">Reporte Personal</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-lg-3">
+                            <div class="mini-stat clearfix bx-shadow">
+                                <a href="#"   target="_blank" class="btn btn-primary btn-lg active" role="button">Consultar Estudios</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-lg-3">
+                            <div class="mini-stat clearfix bx-shadow">
+                                <a href="#"   target="_blank" class="btn btn-primary btn-lg active" role="button">Consultar Docencia</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-lg-3">
+                            <div class="mini-stat clearfix bx-shadow">
+                                <a href="#"   target="_blank" class="btn btn-primary btn-lg active" role="button">Reporte Estudios</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-lg-3">
+                            <div class="mini-stat clearfix bx-shadow">
+                                <a href="#"   target="_blank" class="btn btn-primary btn-lg active" role="button">Reporte de Docencia</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-lg-3">
+                            <div class="mini-stat clearfix bx-shadow">
+                                <a href="{% url 'clientes:listarpersona' %}"   target="_blank" class="btn btn-primary btn-lg active" role="button">Listar Persona</a>
+                            </div>
+                        </div>
+
+                         <div class="col-md-6 col-sm-6 col-lg-3">
+                            <div class="mini-stat clearfix bx-shadow">
+                                <a href="{% url 'clientes:listarcliente' %}"   target="_blank" class="btn btn-primary btn-lg active" role="button">Listar Cliente</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Start Widget -->
+
+                </div>
+                <!-- container -->
+            </div>
+            <!-- Start content -->
+        </div>
+        <!-- END content-page -->
+        {% include "footer.html" %}
+    </div>
+    <!-- END wrapper -->
+
+{% endblock content %}
+
+{% block js1 %}
+    <script src="{% static 'bootstrap-growl/jquery.bootstrap-growl.js' %}"></script>
+
+    <script>
+    $(function() {
+        setTimeout(function() {
+                    $.bootstrapGrowl("Danger, Danger!", {
+                        type: 'danger',
+                        align: 'center',
+                        width: 'auto',
+                        allow_dismiss: false
+                    });
+                }, 20000)
+
+
+
+
+                setTimeout(function() {
+                    $.bootstrapGrowl("Bienvenido al <b>Sistema Administracion Financiera</b>", {
+                        //icon: '<i class="md fa fa-lastfm-square"></i>',
+                        type: 'success',
+                        allow_dismiss: true, });
+                }, 4000);
+            });
+
+    </script>
+
+{% endblock js1 %}
+

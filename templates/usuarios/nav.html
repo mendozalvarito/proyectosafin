@@ -1,0 +1,226 @@
+{% load staticfiles %}
+
+<!-- Top Bar Start -->
+<div class="topbar">
+    <!-- LOGO -->
+    <div class="topbar-left">
+        <div class="text-center">
+            <a href="{% url 'usuarios:dashboard' %}" class="logo">
+               <i class="md fa fa-lastfm-square"></i>
+                <!--i class="md md-terrain"></i-->
+                <span>SAFIN</span></a>
+        </div>
+    </div>
+
+    <!--END LOGO -->
+
+    <!-- Button mobile view to collapse sidebar menu -->
+    <div class="navbar navbar-default" role="navigation">
+        <!--container -->
+        <div class="container">
+            <div class="">
+
+                <div class="pull-left">
+                    <button class="button-menu-mobile open-left">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <span class="clearfix"></span>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    <li class="dropdown hidden-xs"></li>
+                    <li class="hidden-xs">
+                        <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="md md-crop-free"></i></a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{% static 'images/favicon.ico' %}" alt="user-img" class="img-circle"> </a>
+                        <ul class="dropdown-menu">
+                            <li><a href=""><i class="md md-face-unlock"></i> Perfil</a></li>
+                            <!--<li><a href="javascript:void(0)"><i class="md md-settings"></i> Opciones</a></li>-->
+                            <li><a href="{% url 'usuarios:logout' %}"><i class="md md-settings-power"></i> Salir</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!-- END container -->
+    </div>
+    <!--END Button mobile view to collapse sidebar menu -->
+</div>
+<!--END Top Bar-->
+
+<!-- ========== Left Sidebar Start ========== -->
+
+<div class="left side-menu">
+    <div class="sidebar-inner slimscrollleft">
+
+        <div class="user-details">
+            <div class="pull-left">
+                <img src="{% static 'images/favicon.ico' %}" alt="" class="thumb-md img-circle">
+            </div>
+
+            <div class="user-info">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href=""><i class="md md-face-unlock"></i> Perfil<div class="ripple-wrapper"></div></a></li>
+                        <li><a href="{% url 'usuarios:logout' %}"><i class="md md-settings-power"></i> Salir</a></li>
+                    </ul>
+                </div>
+                <p class="text-muted m-0">Usuario</p>
+            </div>
+        </div>
+        <!--- Divider -->
+        <div id="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="#" class="waves-effect active"><i class="md md-home"></i><span> Inicio </span></a>
+                </li>
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="md md-now-widgets"></i><span>Mantenimiento </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><span>Personal</span> <span class="pull-right"><i class="md md-add"></i></span></a>
+                            <ul style="">
+                                <li><a href="#"><span>Gestionar Personal</span></a></li>
+                                <li><a href="#"><span>Gestionar Procedencia</span></a></li>
+                                <li><a href="#"><span>Gestionar Servicio Militar</span></a></li>
+                                <li><a href="#"><span>Gestionar Capacitación</span></a></li>
+                                <li><a href="#"><span>Gestionar Familiares</span></a></li>
+                                <li><a href="#"><span>Gestionar Estudios Superiores</span></a></li>
+                                <li><a href="#"><span>Gestionar Estudios Realizados</span></a></li>
+                                <li><a href="#"><span>Gestionar Docencia</span></a></li>
+                                <li><a href="#"><span>Gestionar Idiomas</span></a></li>
+                                <li><a href="#"><span>Gestionar Familia Emergencia</span></a></li>
+                                <li><a href="#"><span>Gestionar Familia Referencia</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><span>Usuario</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="#" class="waves-effect"><i class="md md-view-list"></i><span> Procesos </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Administrativo</a></li>
+                        <li><a href="#">Gestionar Cargo Administrativo</a></li>
+                        <li><a href="#">Gestionar Capacitacion ProSocial</a></li>
+                        <li><a href="#">Gestionar Bonificacion Familiar</a></li>
+                        <li><a href="#">Gestionar Experiencia Laboral</a></li>
+                        <li><a href="#">Gestionar  Licencias</a></li>
+                        <li><a href="#">Gestionar  Meritos</a></li>
+                        <li><a href="#">Gestionar  Demeritos</a></li>
+                        <li><a href="#">Gestionar  Carrera Laboral</a></li>
+                        <li><a href="#">Gestionar  Bonificacion Personal</a></li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="#" class="waves-effect"><i class="md md-invert-colors-on"></i><span> Consultas </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Consultar Personal</a></li>
+                        <li><a href="#">Consultar Administrativo</a></li>
+                        <li><a href="#">Consultar Administracion</a></li>
+                        <li><a href="#">Consultar Estudios Realizados</a></li>
+                        <li><a href="#">Consultar Estudios Docencia</a></li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="#" class="waves-effect"><i class="md md-poll"></i><span> Reportes </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="#" target="_blank">Reporte de Personal</a></li>
+                        <li><a href="#" target="_blank">Reporte de Administrativo</a></li>
+                        <li><a href="#">Reporte Administracion</a></li>
+                        <li><a href="#">Reporte Estudios Realizados</a></li>
+                        <li><a href="#">Reporte Estudios Docencia</a></li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="#" class="waves-effect"><i class="md md-pages"></i><span> Ayuda </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Ayuda</a></li>
+                        <li><a href="#">Acerca</a></li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="#" class="waves-effect"><i class="md md-view-list"></i><span> Data Tables </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="tables.html">Basic Tables</a></li>
+                        <li><a href="table-datatable.html">Data Table</a></li>
+                        <li><a href="tables-editable.html">Editable Table</a></li>
+                        <li><a href="responsive-table.html">Responsive Table</a></li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="#" class="waves-effect"><i class="md md-poll"></i><span> Charts </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="morris-chart.html">Morris Chart</a></li>
+                        <li><a href="chartjs.html">Chartjs</a></li>
+                        <li><a href="flot-chart.html">Flot Chart</a></li>
+                        <li><a href="peity-chart.html">Peity Charts</a></li>
+                        <li><a href="charts-sparkline.html">Sparkline Charts</a></li>
+                        <li><a href="chart-radial.html">Radial charts</a></li>
+                        <li><a href="other-chart.html">Other Chart</a></li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="#" class="waves-effect"><i class="md md-place"></i><span> Maps </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="gmap.html"> Google Map</a></li>
+                        <li><a href="vector-map.html"> Vector Map</a></li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="#" class="waves-effect"><i class="md md-pages"></i><span> Pages </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="invoice.html">Invoice</a></li>
+                        <li><a href="email-template.html">Email template</a></li>
+                        <li><a href="contact.html">Contact-list</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="recoverpw.html">Recover Password</a></li>
+                        <li><a href="lock-screen.html">Lock Screen</a></li>
+                        <li><a href="blank.html">Blank Page</a></li>
+                        <li><a href="maintenance.html">Maintenance</a></li>
+                        <li><a href="coming-soon.html">Coming-soon</a></li>
+                        <li><a href="404.html">404 Error</a></li>
+                        <li><a href="404_alt.html">404 alt</a></li>
+                        <li><a href="500.html">500 Error</a></li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="md md-share"></i><span>Multi Level </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><span>Menu Level 1.1</span> <span class="pull-right"><i class="md md-add"></i></span></a>
+                            <ul style="">
+                                <li><a href="javascript:void(0);"><span>Menu Level 2.1</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Menu Level 2.2</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Menu Level 2.3</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><span>Menu Level 1.2</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

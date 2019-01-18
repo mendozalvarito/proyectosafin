@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<!---
+Color Base del Sistema
+#2d9560
+--->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--title>Sistema de Administracion Financiera</title-->
+    <title>{% block title %}{% endblock title %}</title>
+    <meta name="description" content="Sistema de Administracion Financiera,Cooperativa de Telecomunicaciones Cobija Ltda.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="COTECO Ltda">
+	{% block css %}
+	{% endblock css %}
+
+    <body class="fixed-left">
+    {% block subtitle %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock content %}
+
+    {% block footer %}
+    {% endblock footer%}
+
+    {% block js %}
+    {% endblock js %}
+
+    {% block js1 %}
+    {% endblock js1 %}
+    </body>
+
+</html>

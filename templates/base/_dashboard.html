@@ -1,0 +1,222 @@
+{% extends "base/base_admin.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+    <!-- Base Css Files -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <!-- Font Icons -->
+    <link href="{% static 'assets/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" />
+    <!--link href="% static 'assets/font-awesome-4.1.0/css/font-awesome.min.css' %" rel="stylesheet" /-->
+    <link href="{% static 'assets/ionicon/css/ionicons.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/material-design-iconic-font.min.css' %}" rel="stylesheet">
+    <!-- animate css -->
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet" />
+    <!-- Waves-effect -->
+    <link href="{% static 'css/waves-effect.css' %}" rel="stylesheet">
+    <!-- sweet alerts -->
+    <link href="{% static 'assets/sweet-alert/sweet-alert.min.css' %}" rel="stylesheet">
+    <!-- DataTables -->
+    <link href="{% static 'assets/datatables/jquery.dataTables.min.css' %}" rel="stylesheet" type="text/css" />
+    <!-- Custom Files -->
+    <link href="{% static 'css/helper.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+    <!-- Plugins css-->
+    <link href="{% static 'tagsinput/jquery.tagsinput.css' %}" rel="stylesheet" />
+    <link href="{% static 'toggles/toggles.css' %}" rel="stylesheet" />
+    <link href="{% static 'timepicker/bootstrap-timepicker.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'timepicker/bootstrap-datepicker.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'colorpicker/colorpicker.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'jquery-multi-select/multi-select.css' %}"  rel="stylesheet" type="text/css" />
+    <link href="{% static 'select2/select2.css' %}" rel="stylesheet" type="text/css" />
+
+
+    <!--style>
+        #mapa {height:100%;width:100%;margin:0;padding:0;}
+    </style-->
+    </head>
+{% endblock css%}
+
+
+
+
+{% block js %}
+
+
+
+
+    <script src="{% static 'js/modernizr.min.js' %}"></script>
+    <script>
+        var resizefunc = [];
+    </script>
+        <!-- jQuery -->
+         <script src="{%   static 'js/jquery.min.js' %}"></script>
+
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/waves.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nicescroll.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery.scrollTo.min.js' %}"></script>
+    <script src="{% static 'assets/chat/moment-2.2.1.js' %}"></script>
+    <script src="{% static 'assets/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
+    <script src="{% static 'assets/jquery-detectmobile/detect.js' %}"></script>
+    <script src="{% static 'assets/fastclick/fastclick.js' %}"></script>
+    <script src="{% static 'assets/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
+    <script src="{% static 'assets/jquery-blockui/jquery.blockUI.js' %}"></script>
+    <!-- sweet alerts -->
+    <script src="{% static 'assets/sweet-alert/sweet-alert.min.js' %}"></script>
+    <script src="{% static 'assets/sweet-alert/sweet-alert.init.js' %}"></script>
+    <!-- flot Chart -->
+    <script src="{% static 'assets/flot-chart/jquery.flot.js' %}"></script>
+    <script src="{% static 'assets/flot-chart/jquery.flot.time.js' %}"></script>
+    <script src="{% static 'assets/flot-chart/jquery.flot.tooltip.min.js' %}"></script>
+    <script src="{% static 'assets/flot-chart/jquery.flot.resize.js' %}"></script>
+    <script src="{% static 'assets/flot-chart/jquery.flot.pie.js' %}"></script>
+    <script src="{% static 'assets/flot-chart/jquery.flot.selection.js' %}"></script>
+    <script src="{% static 'assets/flot-chart/jquery.flot.stack.js' %}"></script>
+    <script src="{% static 'assets/flot-chart/jquery.flot.crosshair.js' %}"></script>
+    <!-- Counter-up -->
+    <script src="{% static 'assets/counterup/waypoints.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'assets/counterup/jquery.counterup.min.js' %}" type="text/javascript"></script>
+    <!-- CUSTOM JS -->
+    <script src="{% static 'js/jquery.app.js' %}"></script>
+    <!--script src="{% static 'assets/datatables/jquery.dataTables.min.css' %}"></script>
+    <script src="{% static 'assets/datatables/dataTables.bootstrap.js' %}"></script-->
+
+    <script src="{% static 'tagsinput/jquery.tagsinput.min.js' %}"></script>
+    <script src="{% static 'toggles/toggles.min.js' %}"></script>
+    <script src="{% static 'timepicker/bootstrap-timepicker.min.js' %}"></script>
+    <script src="{% static 'timepicker/bootstrap-datepicker.js' %}"></script>
+    <script src="{% static 'colorpicker/bootstrap-colorpicker.js' %}"></script>
+    <script src="{% static 'jquery-multi-select/jquery.multi-select.js' %}"></script>
+    <script src="{% static 'jquery-multi-select/jquery.quicksearch.js' %}"></script>
+    <script src="{% static 'spinner/spinner.min.js' %}"></script>
+    <script src="{% static 'bootstrap-inputmask/bootstrap-inputmask.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'select2/select2.min.js' %}" type="text/javascript"></script>
+        <!-- Dashboard -->
+    <script src="{% static 'js/jquery.dashboard.js' %}"></script>
+        <!-- Chat -->
+    <script src="{% static 'js/jquery.chat.js' %}"></script>
+        <!-- Todo -->
+    <script src="{% static 'js/jquery.todo.js' %}"></script>
+    <!--form validation-->
+    <script type="{% static 'assets/jquery.validate/jquery.validate.min.js' %}"></script>
+    <!--form validation init-->
+    <!--script src="{% static 'assets/jquery.validate/form-validation-init.js' %}"></script-->
+    <!-- validator -->
+    <script src="{% static 'validator/validator.js' %}"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script-->
+    <!--script src="{--% static 'safin/scripts.js' %-}"></script-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9jKxjXEEVPE-0XaPhZyMF_TkPqDSfpJs"></script>
+
+<script>
+$(function () {
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(getCoords,getError);
+    } else {
+        initialize(-11.022923,-68.759169);
+    }
+
+    function getCoords(position) {
+        var lat = position.coords.latitude;
+        var lng = position.coords.longitude;
+
+        initialize(lat,lng);
+    }
+    function getError(error) {
+        initialize(-11.022923,-68.759169);
+    }
+    function initialize(lat, lng) {
+        var latlng = new google.maps.LatLng(lat,lng);
+        var mapSettings = {
+            center:latlng,
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+
+        map = new google.maps.Map($('#mapa').get(0),mapSettings);
+        var marker = new google.maps.Marker({
+        position:latlng,
+        map:map,
+        draggable:true,
+        title:"Arrastrame!"
+        });
+
+        getMarkerCoords(marker);
+
+        google.maps.event.addListener(marker,'position_changed',function(){
+            getMarkerCoords(marker);
+        });
+    }
+
+    function getMarkerCoords(marker){
+        var markerCoords = marker.getPosition();
+        $('#id_latitudubicacion').val(markerCoords.lat());
+        $('#id_longitudubicacion').val(markerCoords.lng());
+        console.log(markerCoords.lat() + '  ' + markerCoords.lng())
+    }
+});
+
+$(document).ready(function(){
+    var $myForm = $('#form_ubicacion')
+    $myForm.submit(function(event){
+
+        event.preventDefault()
+
+        var $formData = $(this).serialize()
+        var $endpoint = $myForm.attr('data-url') || window.location.href // or set your own url
+        console.log($formData)
+        console.log($endpoint)
+        $.ajax({
+            method: "POST",
+            url: $endpoint,
+            data: $formData,
+            success: handleFormSuccess,
+            error: handleFormError,
+        })
+
+    })
+     function handleFormSuccess(data, textStatus, jqXHR){
+       // console.log(data)
+       // console.log(textStatus)
+       // console.log(jqXHR)
+       // $('#form_coords').each(function(){ this.reset();});
+       // $myForm.reset(); // reset form data
+         $myForm.each(function(){ this.reset();});
+         alert("Se Ha Guardado Ubicacion");
+    }
+
+    function handleFormError(jqXHR, textStatus, errorThrown){
+        console.log(jqXHR)
+        console.log(textStatus)
+        console.log(errorThrown)
+    }
+
+})
+
+</script>
+
+
+
+{% endblock js %}

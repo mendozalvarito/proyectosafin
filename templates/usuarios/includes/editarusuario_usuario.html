@@ -1,0 +1,70 @@
+{% extends "usuarios/base_dashboard.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Editar de Usuario Nuevo{% endblock title %}
+
+{% block subtitle %}{% endblock %}
+
+{% block content %}
+    <!-- Begin page -->
+    <div id="wrapper">
+    <!-- wrapper -->
+    {% include "usuarios/nav.html" %}
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+        <div class="content-page">
+        <!-- Start content-page -->
+            <div class="content">
+            <!-- Start container -->
+                <div class="container">
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h4 class="pull-left page-title">Usuario</h4>
+                            <ol class="breadcrumb pull-right">
+                                <li class="active">Modificar Usuario</li>
+                                <li class="active"><a href="{% url 'usuarios:dashboard' %}"><i class="md fa fa-lastfm-square"></i> Inicio</a></li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Modificar Usuario</h3>
+                                </div>
+                                <div class="panel-body">
+
+                                    <form class="form-horizontal"  method="post" action="">
+                                        {% csrf_token %}
+    <!--{-{ form.as_p }-}-->                {% include "includes/_forms.html" with form=form %}
+
+                                        <div class="ln_solid"></div>
+                                        <div class="form-group">
+                                            <div class="col-md-6 col-md-offset-3">
+                                                <button type="reset" class="btn btn-primary">Cancel</button>
+                                                <button type="submit" class="btn btn-success">Actualizar</button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+
+                                </div> <!-- panel-body -->
+                            </div> <!-- panel -->
+                        </div> <!-- col -->
+                    </div> <!-- row -->
+
+
+                </div>
+            </div>
+            <!--End Page Contener-->
+        </div>
+
+        {% include "footer.html" %}
+
+    <!-- END wrapper -->
+    </div>
+{% endblock %}

@@ -1,0 +1,117 @@
+{% extends "usuarios/base_dashboard.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Informacion de Usuarios Nuevo{% endblock title %}
+
+{% block subtitle %}{% endblock %}
+
+{% block content %}
+    <!-- Begin page -->
+    <div id="wrapper">
+        <!-- wrapper -->
+        {% include "usuarios/nav.html" %}
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="content-page">
+        <!-- Start content-page -->
+            <div class="content">
+                <!-- Start container -->
+                <div class="container">
+                    <!-- Page-Title -->
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <h4 class="pull-left page-title">Usuario</h4>
+                            <ol class="breadcrumb pull-right">
+                                <li class="active">Informacion</li>
+                                <li class="active"><a href="{% url 'usuarios:dashboard' %}"><i class="md fa fa-lastfm-square"></i> Inicio</a></li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="right_col" role="main">
+                        <div class="">
+                            <div class="clearfix"></div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="x_content">
+                                                <section class="content invoice">
+                                                    <!-- title row -->
+                                                    <div class="row">
+                                                        <div class="col-xs-12 invoice-header">
+                                                            <h1>
+                                                                <div class="row invoice-info">
+                                                                    <div class="col-sm-9 col-xs-6 invoice-col">
+                                                                        <i class="fa fa-globe h5"></i> Perfil
+                                                                    </div>
+                                                                    <div class="col-sm-3 col-xs-6 invoice-col">
+                                                                        <small>Dia: </small>
+                                                                    </div>
+                                                                </div>
+                                                            </h1>
+                                                        </div>
+                                                        <!-- /.col -->
+                                                    </div>
+                                                    <!-- info row -->
+                                                    <div class="row invoice-info">
+                                                        <div class="col-sm-6 col-xs-6 invoice-col">
+                                                            Informacion
+                                                            <address>
+                                                                <strong>Usuario</strong>
+                                                                <br>Nombre
+                                                                <br>Apellido
+                                                                <br>Email
+                                                            </address>
+                                                        </div>
+                                                    <!-- /.col -->
+                                                        <div class="col-sm-6 col-xs-6- invoice-col">
+                                                            Detalle
+                                                            <address>
+                                                                <strong>{{ user.username }}</strong>
+                                                                <br>{{ user.first_name }}
+                                                                <br>{{ user.last_name }}
+                                                                <br>{{ user.email }}
+                                                            </address>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row no-print">
+                                                        <div class="col-xs-12">
+                                                            <div row>
+
+                                                                <div class="col-md-12">
+                                                                    <div class="pull-right">
+                                                                        <button onclick="window.location.href='{% url 'usuarios:editar_usuario' %}'" class="btn btn-success"><i class="md md-face-unlock"></i> Modificar Usuario</button>
+                                                                        <button onclick="window.location.href='{% url 'usuarios:editar_password' %}'" class="btn btn-primary"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Cambiar Contraseña</button>
+                                                                    </div>
+                                                                </div>
+<!---
+         <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Print</button>
+         <button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment</button>
+         <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> Generate PDF</button>
+--->
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Page Contener-->
+        {% include "footer.html" %}
+
+    </div>
+{% endblock %}

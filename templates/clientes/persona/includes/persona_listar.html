@@ -1,0 +1,36 @@
+{% for persona in personas %}
+    <tr>
+        <td>{{ forloop.counter}} {{ persona.id }}</td>
+        <td>{{ persona.nombrepersona }}</td>
+        <td>{{ persona.paternopersona }} </td>
+        <td>{{ persona.maternopersona }}</td>
+        <td><span class="label label-success">{{ persona.cipersona }}</span></td>
+        <td>{{ persona.nacimientopersona|date:"d M Y"}}</td>
+        <!--td>{{ persona.generopersona }}</td-->
+        <td class="text-right">
+            <button type="button"
+              class="btn btn-success btn-sm js-detalle-persona" data-url="">
+                <span class="glyphicon glyphicon-eye-open"></span>
+            </button>
+            <button type="button"
+              class="btn btn-warning btn-sm js-actualizar-persona" href="{% url 'clientes:actualizarpersona' persona.id %}"> <!--data-url="{-% url 'clientes:actualizarpersona' persona.id %}"-->
+                <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+            <button type="button"
+              class="btn btn-danger btn-sm js-eliminar-persona" data-url="{% url 'clientes:eliminarpersona' persona.id %}">
+                <span class="glyphicon glyphicon-trash"></span>
+            </button>
+        </td>
+    </tr>
+{% empty %}
+  <tr>
+    <td colspan="8" class="text-center bg-warning">No hay registro persona</td>
+  </tr>
+{% endfor %}
+<!--
+class="btn btn-warning btn-sm js-update-book"
+class="btn btn-danger btn-sm js-delete-book"
+-->
+            <!--a href="" class="btn btn-success"><span class="glyphicon glyphicon-eye-open"></span></a>
+            <a href="" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a-->

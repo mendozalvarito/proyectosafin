@@ -1,0 +1,32 @@
+{% for ubicacion in ubicaciones %}
+    <tr>
+        <td>{{ forloop.counter}} {{ ubicacion.id }}</td>
+        <td>{{ ubicacion.latitudubicacion }}</td>
+        <td>{{ ubicacion.longitudubicacion }} </td>
+
+        {% if ubicacion.descripcionubicacion == None %}
+            <td><b style="color:red;">Sin Registro</b></td>
+        {% else %}
+            <td>{{ ubicacion.descripcionubicacion }}</td>
+        {% endif %}
+
+        <td class="text-right">
+            <button type="button"
+              class="btn btn-success btn-sm js-detalle-persona" data-url="">
+                <span class="glyphicon glyphicon-eye-open"></span>
+            </button>
+            <button type="button"
+              class="btn btn-warning btn-sm js-actualizar-persona" href=""> <!--data-url="{-% url 'clientes:actualizarpersona' persona.id %}"-->
+                <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+            <button type="button"
+              class="btn btn-danger btn-sm js-eliminar-persona" data-url="">
+                <span class="glyphicon glyphicon-trash"></span>
+            </button>
+        </td>
+    </tr>
+{% empty %}
+  <tr>
+    <td colspan="8" class="text-center bg-warning">No hay registro ubicacion</td>
+  </tr>
+{% endfor %}

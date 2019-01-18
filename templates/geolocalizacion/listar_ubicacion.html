@@ -1,0 +1,123 @@
+{% extends "geolocalizacion/base_geolocalizacion.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Listar Persona{% endblock title %}
+
+{% block content %}
+<div id="wrapper">
+    <!-- Start wrapper -->
+    {% include "usuarios/nav.html" %}
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <!-- Start content-page -->
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            <!-- Start container -->
+            <div class="container">
+
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="pull-left page-title">
+                            <strong>Lista de Ubicaciones</strong>
+                        </h4>
+
+
+                        <ol class="breadcrumb pull-right">
+                            <a href="{% url 'geolocalizacion:index' %}" class="btn btn-success
+                            js-crear-persona">
+                                <span class="glyphicon glyphicon-plus"></span> Agregar</a>
+                            <li class="active">Ubicacion</li>
+                            <li class="active">Geolocalizacion</li>
+                            <li class="active"><a href="{% url 'usuarios:dashboard' %}"><i class="md fa fa-lastfm-square"></i> Inicio</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+
+                <div class="box-body">
+                    <table id="persona-table" class="table table-bordered table-striped col-xs-12">
+
+                        <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Latitud</th>
+                            <th>Longitud</th>
+                            <th>Descripcion</th>
+                            <th>Acciones</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                            {% include 'geolocalizacion/ubicacion/ubicacion_listar.html' %}
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+
+                <div class="modal fade" id="modal-persona">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- END content-page -->
+        </div>
+        <!-- END content -->
+    </div>
+    <!-- END container -->
+    {% include "footer.html" %}
+<!-- END wrapper -->
+</div>
+{% endblock content %}
+
+
+{% block js1 %}
+<script src="{% static 'safin/geolocalizacion.js' %}"></script>
+
+    <script type="text/javascript">
+       /* ==============================================
+       Counter Up
+       =============================================== */
+       jQuery(document).ready(function($) {
+           $('.counter').counterUp({
+               delay: 100,
+               time: 1200
+           });
+       });
+   </script>
+
+    <script>
+
+    $('#persona-table').DataTable({
+        responsive: true,
+    "language": {
+        "lengthMenu": "Mostrar _MENU_ registros por pagina",
+        "zeroRecords": "No se encontraron resultados en su busqueda",
+        "searchPlaceholder": "Buscar registros",
+        "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
+        "infoEmpty": "No existen registros",
+        "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+        "search": "Buscar:",
+        "paginate": {
+            "first": "Primero",
+            "last": "Último",
+            "next": "Siguiente",
+            "previous": "Anterior"
+        },
+    }
+});
+
+    </script>
+
+
+{% endblock js1 %}
+

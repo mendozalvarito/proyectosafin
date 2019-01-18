@@ -1,0 +1,57 @@
+{% for cliente in clientes %}
+    <tr>
+        <td>{{ forloop.counter}} {{ cliente.id }}</td>
+        <td><div class="h6">
+
+        <lu>
+            {% for Persona in cliente.Personas_Clientes.all %}
+            <li>
+                {{ Persona.nombrepersona }} {{ Persona.paternopersona }}
+            </li>
+            {% endfor %}
+        </lu>
+
+        </div></td>
+
+        {% if cliente.Instituciones == None %}
+            <td> </td>
+        {% else %}
+            <td>{{ cliente.Instituciones.nombreinstituciones }}</td>
+        {% endif %}
+
+        <td>{{ cliente.Instituciones.nitinstituciones }}</td>
+
+        <td>{{ cliente.celularcliente }}</td>
+
+        <td>{{ cliente.emailcliente }}</td>
+
+        {% if cliente.estadocliente == True %}
+            <td><span class="label label-success">Activo</span></td>
+        {% else %}
+            <td><span class="label label-danger">Inactivo</span></td>
+        {% endif %}
+
+        <td>{{ cliente.observacioncliente}}</td>
+
+
+
+        <td class="text-right">
+            <button type="button"
+              class="btn btn-success btn-sm js-detalle-persona" data-url="">
+                <span class="glyphicon glyphicon-eye-open"></span>
+            </button>
+            <button type="button"
+              class="btn btn-warning btn-sm js-actualizar-persona" href=""> <!--data-url="{-% url 'clientes:actualizarpersona' persona.id %}"-->
+                <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+            <button type="button"
+              class="btn btn-danger btn-sm js-eliminar-persona" data-url="">
+                <span class="glyphicon glyphicon-trash"></span>
+            </button>
+        </td>
+    </tr>
+{% empty %}
+  <tr>
+    <td colspan="8" class="text-center bg-warning">No hay registro clientes</td>
+  </tr>
+{% endfor %}

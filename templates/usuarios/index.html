@@ -1,0 +1,49 @@
+{% extends "usuarios/base_usuarios.html" %}
+{% block title %}Login{% endblock title %}
+{% block content %}
+    <div class="wrapper-page">
+        <div class="panel panel-color panel-primary panel-pages">
+            <div class="panel-heading bg-img">
+                <div class="bg-overlay"></div>
+                <h3 class="text-center m-t-10 text-white"> Iniciar <strong>Sesión</strong> </h3>
+                </div>
+            <!--{--% if message %--}
+                {--{ message }--}
+                {--% endif %--}-->
+
+            {% for hidden_field in form.hidden_fields %}
+                {{ hidden_field }}
+            {% endfor %}
+
+            {% if message %}
+                <div class="alert alert-danger" class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+
+                        <strong>Error! </strong>{{ message }}
+                </div>
+
+            {% endif %}
+
+
+            <!--/div-->
+            <div class="panel-body">
+                <form class="form-horizontal m-t-0" method="post" action="" autocomplete="off">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="form-group text-center m-t-40">
+                        <div class="col-xs-12">
+                            <button class="btn btn-success btn-lg w-lg waves-effect waves-light" type="submit">Entrar</button>
+                        </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Login box
+    <footer class="box-footer">
+            <p id="footer-text"><small>Copyright &copy; 2018 </small></p>
+    </footer>
+    -->
+{% endblock content %}
+
