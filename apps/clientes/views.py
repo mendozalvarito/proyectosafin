@@ -31,7 +31,7 @@ def CreatePersonaView(request):
     #print(Persona.nacimientopersona)
     if form.is_valid():
         form.save()
-        return redirect('clientes:listapersona')
+        return redirect('clientes:listarpersona')
     return render(request, 'clientes/persona/agregar_persona.html', {'form': form})
 
 
@@ -121,7 +121,6 @@ def EliminarPersonaView(request, id):
         context = {'persona': persona}
         data['html_form'] = render_to_string('clientes/persona/includes/persona_eliminar.html', context, request=request)
     return JsonResponse(data)
-
 
 
 

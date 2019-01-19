@@ -163,7 +163,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
 ]
+
 API_KEY_GOOGLE_MAPS = "AIzaSyD9jKxjXEEVPE-0XaPhZyMF_TkPqDSfpJs"
+
+#API_KEY_GOOGLE_MAPS = "AIzaSyAKvrz6DQcvNKARRTTu4W_Hh7WK9N8bBN4"
+
