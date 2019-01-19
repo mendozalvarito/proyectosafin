@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dcfa6fd8-58d2-4e42-b260-780b72b9e8d4" name="Default Changelist" comment="Requerimientos">
+    <list default="true" id="dcfa6fd8-58d2-4e42-b260-780b72b9e8d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/clientes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/clientes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectosafin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/proyectosafin/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/usuarios/base_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usuarios/base_dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/usuarios/includes/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usuarios/includes/dashboard.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,11 +64,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/geolocalizacion/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/usuarios/includes/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="224" column="44" selection-start-line="224" selection-start-column="44" selection-end-line="224" selection-end-column="44" />
+            <state relative-caret-position="511">
+              <caret line="178" column="64" lean-forward="true" selection-start-line="178" selection-start-column="64" selection-end-line="178" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -130,31 +139,12 @@
               <item name="proyectosafin" type="b2602c69:ProjectViewProjectNode" />
               <item name="proyectosafin" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="clientes" type="462c0819:PsiDirectoryNode" />
+              <item name="geolocalizacion" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="proyectosafin" type="b2602c69:ProjectViewProjectNode" />
               <item name="proyectosafin" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="proyectosafin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="proyectosafin" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="clientes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="proyectosafin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="proyectosafin" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="clientes" type="462c0819:PsiDirectoryNode" />
-              <item name="persona" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="proyectosafin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="proyectosafin" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="proyectosafin" type="b2602c69:ProjectViewProjectNode" />
@@ -181,7 +171,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -269,7 +259,7 @@
       <workItem from="1547768191099" duration="2816000" />
       <workItem from="1547828578647" duration="7177000" />
       <workItem from="1547853812802" duration="1690000" />
-      <workItem from="1547855673236" duration="3048000" />
+      <workItem from="1547855673236" duration="5469000" />
     </task>
     <task id="LOCAL-00001" summary="ificacion despues del trabajo">
       <created>1547837377792</created>
@@ -292,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547842497242</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Correcion de los estilos Errores">
+      <created>1547858879576</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1547858879576</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -301,11 +298,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27389000" />
+    <option name="totallyTimeSpent" value="29810000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15298508" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -326,8 +322,8 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="R Graphics" order="4" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32995737" />
+      <window_info anchor="right" id="R Graphics" order="4" weight="0.32995737" />
       <window_info anchor="right" id="R Packages" order="5" weight="0.32995737" />
       <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
     </layout>
@@ -349,7 +345,8 @@
     <MESSAGE value="ificacion despues del trabajo" />
     <MESSAGE value="Prueba colom" />
     <MESSAGE value="Requerimientos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Requerimientos" />
+    <MESSAGE value="Correcion de los estilos Errores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correcion de los estilos Errores" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/proyectosafin/wsgi.py">
@@ -382,13 +379,6 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/python36/Lib/wsgiref/simple_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
@@ -566,27 +556,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/usuarios/base_dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-764">
-          <caret line="60" column="10" lean-forward="true" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/usuarios/base_usuarios.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/usuarios/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-16" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/usuarios/base_usuarios.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/usuarios/base_dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-764">
+          <caret line="60" column="7" lean-forward="true" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/geolocalizacion/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/python36/Lib/wsgiref/simple_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/usuarios/includes/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="224" column="44" selection-start-line="224" selection-start-column="44" selection-end-line="224" selection-end-column="44" />
+        <state relative-caret-position="511">
+          <caret line="178" column="64" lean-forward="true" selection-start-line="178" selection-start-column="64" selection-end-line="178" selection-end-column="64" />
         </state>
       </provider>
     </entry>
