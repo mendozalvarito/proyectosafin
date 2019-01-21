@@ -1,7 +1,7 @@
 from django import forms
-from clientes.models import Cliente,Persona,Instituciones
-from clientes.models import Direccion,Ubicacion,Barrio
-from clientes.models import Planservicios
+from apps.clientes.models import Cliente,Persona,Instituciones
+from apps.clientes.models import Direccion,Ubicacion,Barrio
+from apps.clientes.models import Planservicios
 
 """
 Constantes

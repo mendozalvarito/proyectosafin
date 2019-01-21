@@ -75,7 +75,8 @@
                     <!--input type="text" id="query" placeholder="Buscar">
                     <button id="search" class="btn btn-primary">Search</button-->
 
-                                                            <form method="post" action="." id="form_ubicacion" data-url='/geolocalizacion/guardar/'>{% csrf_token %}
+                                                            <form method="post" action="." id="form_ubicacion" data-url='/geolocalizacion/guardar/'>
+                                                                {% csrf_token %}
                                                                 {{ form.as_p }}
 
                                                                 <div class="form-group">
