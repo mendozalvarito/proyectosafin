@@ -183,5 +183,3 @@ class Unidades(TimeStampModel):
 
     def __str__(self):
         return '%s %s' % (self.nombreunidades, self.siglaunidades)
-
-
