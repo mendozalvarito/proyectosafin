@@ -21,8 +21,9 @@ Constantes
 SEXOS = (('M', 'Masculino'),('F', 'Femenino'))
 
 class TimeStampModel(models.Model):
-    created = models.DateTimeField(auto_now_add=True)
-    modified = models.DateTimeField(auto_now=True)
+    creacion = models.DateTimeField(auto_now_add=True)
+    modificacion = models.DateTimeField(auto_now=True)
+    estado = models.BooleanField(default=True)
 
     class Meta:
         abstract = True
@@ -47,7 +48,7 @@ class Persona(TimeStampModel):
     nacimientopersona = models.DateField(blank=True,null=True,
                                          verbose_name = 'Fecha de nacimiento',
                                          help_text = 'Seleccione su fecha de nacimiento')
-    usuariopersona = models.IntegerField(blank=True, null=True)
+    #usuariopersona = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
         return '%s %s %s %s' % (self.cipersona,self.nombrepersona,self.paternopersona,self.maternopersona)
@@ -66,8 +67,8 @@ class Cliente(TimeStampModel):
     observacioncliente = models.CharField(max_length=50, blank=True, null=True,
                                               verbose_name = 'Observaciones',
                                               help_text = 'Ingrese Observaciones')
-    estadocliente = models.BooleanField(default=True)
-    usuariocliente = models.IntegerField(blank=True, null=True)
+    #estadocliente = models.BooleanField(default=True)
+    #usuariocliente = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
         return '%s %s' % (self.emailcliente,self.Instituciones)

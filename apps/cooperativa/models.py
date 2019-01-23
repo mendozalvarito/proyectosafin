@@ -18,8 +18,9 @@ Subunidades(Unidades)/Muchos A Muchos
 
 
 class TimeStampModel(models.Model):
-    created = models.DateTimeField(auto_now_add=True)
-    modified = models.DateTimeField(auto_now=True)
+    creacion = models.DateTimeField(auto_now_add=True)
+    modificacion = models.DateTimeField(auto_now=True)
+    estado = models.BooleanField(default=True)
 
     class Meta:
         abstract = True
@@ -99,7 +100,7 @@ class Servicios(TimeStampModel):
     descripcionservicios = models.CharField(max_length=50, blank=True, null=True,
                                             verbose_name='Descripcion del Servicio',
                                             help_text='Ingrese Descripcion del Servicio')
-    estadoservicios = models.BooleanField(default=True)
+    #estadoservicios = models.BooleanField(default=True)
 
     def __str__(self):
         return self.nombreservicios
@@ -129,7 +130,7 @@ class Planservicios(TimeStampModel):
     detalleplanservicios = models.CharField(max_length=255,blank=True, null=True,
                                             verbose_name='Detalle del Plan Servicio',
                                             help_text='Ingrese Detalle del Plan Servicio')
-    estadoplanservicios = models.BooleanField(default=True)
+    #estadoplanservicios = models.BooleanField(default=True)
 
     def __str__(self):
         return '%s %s %s' % (self.nombreplanservicios, self.Servicios, self.Precioservicios)
@@ -144,7 +145,7 @@ class Direcciones(TimeStampModel):
     descripciondirecciones = models.CharField(max_length=255, blank=True, null=True,
                                  verbose_name='Descripcion de la Direcciones',
                                  help_text='Ingrese la Descripcion de la Direcciones')
-    estadodirecciones = models.BooleanField(default=True)
+    #estadodirecciones = models.BooleanField(default=True)
 
     def __str__(self):
         return (self.nombredirecciones)
@@ -160,7 +161,7 @@ class Subunidades(TimeStampModel):
     descripcionsubunidades = models.CharField(max_length=255, blank=True, null=True,
                                            verbose_name='Descripcion de la Subunidad',
                                            help_text='Ingrese la Descripcion de la Subunidad')
-    estadosubunidades = models.BooleanField(default=True)
+    #estadosubunidades = models.BooleanField(default=True)
 
     def __str__(self):
         return '%s %s' % (self.nombresubunidades, self.siglasubunidades)
@@ -179,7 +180,7 @@ class Unidades(TimeStampModel):
                                            help_text='Ingrese la Descripcion de la Unidad')
 
 
-    estadounidades = models.BooleanField(default=True)
+    #estadounidades = models.BooleanField(default=True)
 
     def __str__(self):
         return '%s %s' % (self.nombreunidades, self.siglaunidades)

@@ -6,8 +6,9 @@ Ubicacion()
 """
 
 class TimeStampModel(models.Model):
-    created = models.DateTimeField(auto_now_add=True)
-    modified = models.DateTimeField(auto_now=True)
+    creacion = models.DateTimeField(auto_now_add=True)
+    modificacion = models.DateTimeField(auto_now=True)
+    estado = models.BooleanField(default=True)
 
     class Meta:
         abstract = True
