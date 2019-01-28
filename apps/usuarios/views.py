@@ -23,7 +23,7 @@ from django.contrib import messages
 Clases 
 """
 #Login
-
+#ip ip_address = request.META.get('HTTP_X_FORWARDED_FOR', '')
 
 def manual(request):
     return render(request, template_name='')
