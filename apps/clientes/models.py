@@ -47,7 +47,6 @@ class TimeStamped(models.Model):
 """
 
 
-
 class Persona(TimeStampModel):
     nombrepersona = models.CharField(max_length=100, blank=False, null=True,
                                      verbose_name='Nombre',
